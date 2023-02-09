@@ -69,7 +69,13 @@ const App = () => {
                 <ChangePassword msgAlert={msgAlert} user={user} />
               </RequireAuth>}
           />
-				</Routes>
+		  <Route
+		  		path='golfers/:id'
+				element={ <ShowGolfer user={user} 
+				msgAlert={msgAlert}
+			/> }
+			/>
+			</Routes>
 				{msgAlerts.map((msgAlert) => (
 					<AutoDismissAlert
 						key={msgAlert.id}
