@@ -17,6 +17,19 @@ export const getOneGolfer = (id) => {
 }
 
 // CREATE  -- create a golfer
+
+export const createGolfer = (user, newGolfer) => {
+    console.log('this is the new user', user)
+    console.log('this is the new golfer', newGolfer)
+    return axios({
+        url: `${apiUrl}/golfers`,
+        method: 'POST',
+        headers: {
+            Authorization: `Token token=${user.token}`
+        },
+        data: { golfer: newGolfer }
+    })
+}
 // UPDATE -- update a golfer
 // DELETE -- delete a golfer
 

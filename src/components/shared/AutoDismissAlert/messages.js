@@ -6,7 +6,9 @@ const messages = {
 	signOutSuccess: 'Come back soon!',
 	changePasswordSuccess: 'Password changed successfully!',
 	changePasswordFailure:'Failed to change passwords. Check your old password and try again.',
-	getGolfersFailure: 'Failed to retrieve golfers'
+	getGolfersFailure: 'Failed to retrieve golfers',
+	createGolferSuccess: 'New golfer created!!',
+	createGolferFailure: 'Failed to create new golfer, try again'
 }
 
 module.exports = messages

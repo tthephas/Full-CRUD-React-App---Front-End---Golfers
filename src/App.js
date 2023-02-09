@@ -13,6 +13,7 @@ import SignIn from './components/auth/SignIn'
 import SignOut from './components/auth/SignOut'
 import ChangePassword from './components/auth/ChangePassword'
 import ShowGolfer from './components/golfers/ShowGolfer'
+import CreateGolfer from './components/golfers/CreateGolfer'
 
 const App = () => {
 
@@ -69,11 +70,17 @@ const App = () => {
                 <ChangePassword msgAlert={msgAlert} user={user} />
               </RequireAuth>}
           />
+          <Route
+            path='/create-golfer'
+            element={
+              <RequireAuth user={user}>
+                <CreateGolfer msgAlert={msgAlert} user={user} />
+              </RequireAuth>}
+          />
 		  <Route
 		  		path='golfers/:id'
 				element={ <ShowGolfer user={user} 
-				msgAlert={msgAlert}
-			/> }
+				msgAlert={msgAlert} /> }
 			/>
 			</Routes>
 				{msgAlerts.map((msgAlert) => (

@@ -58,6 +58,14 @@ const GolfersIndex = (props) => {
                     className="btn btn-info">View { golfer.name }
                     </Link>
                 </Card.Text>
+
+                { golfer.owner ?
+                <Card.Footer>
+                    Owner: {golfer.owner.email}
+
+                </Card.Footer>    
+                : null}
+                
             </Card.Body>
         </Card>
     ))
