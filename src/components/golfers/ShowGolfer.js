@@ -25,14 +25,14 @@ const ShowGolfer = (props) => {
             .catch(err => {
                 msgAlert({
                     heading: 'Error getting golfers',
-                    message: 'Could not find any golfers',
+                    message: messages.getGolfersFailure,
                     variant: 'danger'
                 })
             })
     }, [])
 
     if (!golfer) {
-        return <p><LoadingScreen /></p>
+        return <p>loading...</p>
     }
     return (
         <>

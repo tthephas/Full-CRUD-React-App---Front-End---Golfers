@@ -28,7 +28,7 @@ const GolfersIndex = (props) => {
             .catch(err => {
                 msgAlert({
                     heading: 'Error getting golfers',
-                    message: 'Could not find any golfers',
+                    message: messages.getGolfersFailure,
                     variant: 'danger'
                 })
                 setError(true)
@@ -36,7 +36,7 @@ const GolfersIndex = (props) => {
     }, [])
 
     if (error) {
-        return <LoadingScreen />
+        return <p>Error!</p>
     }
 
     if (!golfers) {
