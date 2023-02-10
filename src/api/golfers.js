@@ -44,7 +44,8 @@ export const updateGolfer = (user, updatedGolfer) => {
 
 // DELETE -- delete a golfer
 
-export const removeGolfer = {user, golferId} => {
+export const removeGolfer = (user, golferId) => {
+    
     return axios({
         url: `${apiUrl}/golfers/${golferId}`,
         method: 'DELETE',

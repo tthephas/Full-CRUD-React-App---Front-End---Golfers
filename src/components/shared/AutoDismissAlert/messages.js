@@ -12,7 +12,9 @@ const messages = {
 	removeGolferSucces: 'This golfer has been removed',
 	removeGolferFailure: 'Something went wrong, try again',
 	updateGolferSuccess: 'Golfer updated',
-	updateGolferFailure: 'Failed to update, try again'
+	updateGolferFailure: 'Failed to update, try again',
+	createStatFailure: 'Failed to create, try again',
+	createStatSucess: 'Successfully created stats!'
 }
 
 module.exports = messages
