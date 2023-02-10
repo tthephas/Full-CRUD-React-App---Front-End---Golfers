@@ -8,7 +8,11 @@ import EditGolferModal from "./EditGolferModal";
 import ShowStat from "../stats/ShowStat";
 import NewStatModal from "../stats/NewStatModal";
 
-
+const statCardContainerLayout = {
+    display: 'flex',
+    justifyContent: 'center',
+    flexFlow: 'row wrap'
+}
 const ShowGolfer = (props) => {
     const [golfer, setGolfer] = useState(null)
     const [editModalShow, setEditModalShow] = useState(false)
@@ -121,7 +125,7 @@ const ShowGolfer = (props) => {
                     </Card.Footer>
                 </Card>
             </Container>
-            <Container className="m-2">
+            <Container className="m-2" style={statCardContainerLayout}>
                 {statCards}
             </Container>
             <EditGolferModal
