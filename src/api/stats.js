@@ -16,7 +16,7 @@ export const createStat = (golferId, newStat) => {
 // /STATS / GOLFERID / STAT ID
 export const updateStat = (user, golferId, updatedStat) => {
     return axios({
-        url: `${apiUrl}/stats/${golferId}/${updatedStat.id}`,
+        url: `${apiUrl}/stats/${golferId}/${updatedStat._id}`,
         method: 'PATCH',
         headers: {
             Authorization: `Token token=${user.token}`

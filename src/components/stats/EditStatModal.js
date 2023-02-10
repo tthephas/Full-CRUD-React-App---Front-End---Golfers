@@ -29,7 +29,7 @@ const EditStatModal = (props) => {
     }
     const onSubmit = (e) => {
         e.preventDefault()
-        createStat(user, golfer.id, stat)
+        updateStat(user, golfer.id, stat)
             .then(() => handleClose())
             .then(() => {
                 msgAlert({
