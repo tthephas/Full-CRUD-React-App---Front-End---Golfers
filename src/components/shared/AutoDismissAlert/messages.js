@@ -8,7 +8,11 @@ const messages = {
 	changePasswordFailure:'Failed to change passwords. Check your old password and try again.',
 	getGolfersFailure: 'Failed to retrieve golfers',
 	createGolferSuccess: 'New golfer created!!',
-	createGolferFailure: 'Failed to create new golfer, try again'
+	createGolferFailure: 'Failed to create new golfer, try again',
+	removeGolferSucces: 'This golfer has been removed',
+	removeGolferFailure: 'Something went wrong, try again',
+	updateGolferSuccess: 'Golfer updated',
+	updateGolferFailure: 'Failed to update, try again'
 }
 
 module.exports = messages

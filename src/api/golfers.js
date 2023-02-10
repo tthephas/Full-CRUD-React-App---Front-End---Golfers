@@ -31,5 +31,26 @@ export const createGolfer = (user, newGolfer) => {
     })
 }
 // UPDATE -- update a golfer
+export const updateGolfer = (user, updatedGolfer) => {
+    return axios({
+        ulr: `${apiUrl}/golfers/${updatedGolfer.id}`,
+        method: 'PATCH',
+        headers: {
+            Authorization: `Token token=${user.token}`
+        }, 
+        data: { golfer: updatedGolfer }
+    })
+}
+
 // DELETE -- delete a golfer
+
+export const removeGolfer = {user, golferId} => {
+    return axios({
+        url: `${apiUrl}/golfers/${golferId}`,
+        method: 'DELETE',
+        headers: {
+            Authorization: `Token token=${user.token}`
+        }
+    })
+}
 
