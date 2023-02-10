@@ -33,7 +33,7 @@ export const createGolfer = (user, newGolfer) => {
 // UPDATE -- update a golfer
 export const updateGolfer = (user, updatedGolfer) => {
     return axios({
-        ulr: `${apiUrl}/golfers/${updatedGolfer.id}`,
+        url: `${apiUrl}/golfers/${updatedGolfer.id}`,
         method: 'PATCH',
         headers: {
             Authorization: `Token token=${user.token}`

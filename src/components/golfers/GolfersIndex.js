@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import Card from 'react-bootstrap/Card'
 import { Link } from "react-router-dom";
-import { Spinner } from "react-bootstrap"
+//import { Spinner } from "react-bootstrap"
 import LoadingScreen from "../shared/LoadingScreen"
 
 import { getAllGolfers } from "../../api/golfers";
@@ -65,7 +65,7 @@ const GolfersIndex = (props) => {
 
                 </Card.Footer>    
                 : null}
-                
+
             </Card.Body>
         </Card>
     ))
