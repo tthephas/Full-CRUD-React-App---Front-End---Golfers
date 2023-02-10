@@ -63,6 +63,10 @@ const ShowGolfer = (props) => {
                 <ShowStat
                     key={stat.id}
                     stat={stat}
+                    user={user}
+                    golfer={golfer}
+                    msgAlert={msgAlert}
+                    triggerRefresh={() => setUpdated(prev => !prev)}
                 />
             ))
         }
