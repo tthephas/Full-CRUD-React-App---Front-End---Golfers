@@ -5,11 +5,14 @@ import { getOneGolfer, removeGolfer, updateGolfer } from "../../api/golfers";
 import messages from "../shared/AutoDismissAlert/messages";
 //import LoadingScreen from "../shared/LoadingScreen";
 import EditGolferModal from "./EditGolferModal";
+import ShowStat from "../stats/ShowStat";
+import NewStatModal from "../stats/NewStatModal";
 
 
 const ShowGolfer = (props) => {
     const [golfer, setGolfer] = useState(null)
     const [editModalShow, setEditModalShow] = useState(false)
+    const [statModalShow, setStatModalShow] = useState(false)
     const [updated, setUpdated] = useState(false)
     const { id } = useParams()
     const navigate = useNavigate()
@@ -49,6 +52,18 @@ const ShowGolfer = (props) => {
             })
     }
 
+    let statCards
+    if(golfer) {
+        if (golfer.stats.length > 0) {
+            statCards = golfer.stats.map(stat => (
+                <ShowStat
+                    key={stat.id}
+                    stat={stat}
+                />
+            ))
+        }
+    }
+
     if (!golfer) {
         return <p>loading...</p>
     }
@@ -74,13 +89,13 @@ const ShowGolfer = (props) => {
                         </Card.Text>
                     </Card.Body>
                     <Card.Footer>
-                        {/* <Button
+                        <Button
                             className='m-2'
                             variant='info'
                             onClick={() => setStatModalShow(true)}
                         >Give {golfer.name} some stats!
 
-                        </Button> */}
+                        </Button>
                         {
                             golfer.owner && user && golfer.owner._id === user._id ? 
                             <>
@@ -106,6 +121,9 @@ const ShowGolfer = (props) => {
                     </Card.Footer>
                 </Card>
             </Container>
+            <Container className="m-2">
+                {statCards}
+            </Container>
             <EditGolferModal
                 user={user}
                 show={editModalShow}
@@ -114,6 +132,14 @@ const ShowGolfer = (props) => {
                 msgAlert={msgAlert}
                 triggerRefresh={() => setUpdated(prev => !prev)}
                 golfer={golfer}
+            />
+            <NewStatModal
+                user={user}
+                golfer={golfer}
+                show={statModalShow}
+                handleClose={() => setStatModalShow(false)}
+                msgAlert={msgAlert}
+                triggerRefresh={() => setUpdated(prev => !prev)}
             />
         </>
     )
