@@ -74,10 +74,10 @@ const ShowGolfer = (props) => {
     return (
         <>
             <Container>
-                <Card>
-                    <Card.Header>
+                <Card className="mt-3" style={{width:'350px'}}>
+                    <Card.Header style={{fontWeight:'bolder'}}>
                         { golfer.fullTitle }
-                    </Card.Header>
+                    </Card.Header >
                     <Card.Body>
                         <Card.Text>
                             <div>

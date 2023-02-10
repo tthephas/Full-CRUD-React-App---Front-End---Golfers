@@ -48,8 +48,8 @@ const GolfersIndex = (props) => {
     //once we get array. loop over it. 
     // make the cards
     const golferCards = golfers.map(golfer => (
-        <Card key={ golfer.id } style={{ width: '30%', margin: 5}}>
-            <Card.Header>
+        <Card key={ golfer.id } style={{ width: '30%', margin: 5, border: '1pt solid black'}}>
+            <Card.Header style={{fontWeight:'bolder'}}>
                 { golfer.fullTitle}
             </Card.Header>
             <Card.Body>

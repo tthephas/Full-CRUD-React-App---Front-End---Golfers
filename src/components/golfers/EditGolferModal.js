@@ -13,8 +13,9 @@ const EditGolferModal = (props) => {
 
         setGolfer(prevGolfer => {
             const updatedName = e.target.name 
-            let updatedValue = e.target.updatedValue
-
+            let updatedValue = e.target.value
+            console.log('prev golfer', updatedName)
+            console.log('updated golfer ', updatedValue)
             if (e.target.type === 'number') {
                 updatedValue = parseInt(e.target.value)
             }

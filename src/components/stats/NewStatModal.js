@@ -15,7 +15,7 @@ const NewStatModal = (props) => {
         setStat(prevStat => {
             // do i need this?
             const updatedName = e.target.name
-            let updatedValue = e.target.updatedValue
+            let updatedValue = e.target.value
 
             const updatedStat = {
                 [updatedName] : updatedValue
