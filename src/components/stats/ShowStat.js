@@ -35,7 +35,11 @@ const ShowStat = (props) => {
             <Card.Body>
                 Wins: {stat.wins}<br/>
                 Losses: {stat.losses}<br/>
-                Career Earnings: {stat.earnings}
+
+
+                Career Earnings: $ {stat.earnings}
+                
+                
             </Card.Body>
             <Card.Footer>
                 <Button

@@ -97,13 +97,20 @@ const ShowGolfer = (props) => {
                         </Card.Text>
                     </Card.Body>
                     <Card.Footer>
+                        
+
+
                         <Button
                             className='m-2'
                             variant='info'
                             onClick={() => setStatModalShow(true)}
-                        >Give {golfer.name} some stats!
-
+                        >
+                            Give {golfer.name} some stats!
+                            
                         </Button>
+
+                        
+
                         {
                             golfer.owner && user && golfer.owner._id === user._id ? 
                             <>
