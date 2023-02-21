@@ -30,7 +30,7 @@ export const createGolfer = (user, newGolfer) => {
         data: { golfer: newGolfer }
     })
 }
-// UPDATE -- update a golfer
+// UPDATE -- update a golferhea
 export const updateGolfer = (user, updatedGolfer) => {
     return axios({
         url: `${apiUrl}/golfers/${updatedGolfer.id}`,
